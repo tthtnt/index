@@ -152,7 +152,7 @@ ul.nav {
     /* display: inline-block; */
     /* width: auto; */
 }
-.navbar-default .navbar-nav .ju a{
+.navbar-default .navbar-nav .ju a,.navbar-default .navbar-nav .chan>a{
     width: 4.8em;
 }
 .navbar-default .navbar-nav>li>a:focus, .navbar-default .navbar-nav>li>a:hover{
@@ -175,6 +175,10 @@ ul.nav {
 .ju:hover a::before,.wo:hover>a::before,.chan:hover>a::before,.fazhan:hover a::before{
     width:50%;
 }
+.chan:hover>a::before{
+    width: 2.8em;
+    text-align: left;
+}
 .you:hover a::before{
     width: 3em;
 }
@@ -194,52 +198,6 @@ ul.nav {
     content: "| 综合";
     float: left;
 }
-/* font display */
-/* .right,
-.unleft {
-    left: 0;
-}
-
-.unright,
-.left {
-    right: 0;
-}
-
-.right,
-.left {
-    left: 50%;
-}
-
-.right,
-.unright,
-.left,
-.unleft {
-    transition: all .6s;
-    display: block;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-}
-.unright,
-.unleft {
-    width: 0px;
-    overflow: hidden;
-}
-.ju:hover .unright,.wo:hover .unleft,.chan:hover .unright,.fazhan:hover .unright,.you:hover .unleft{
-    width: 2em;
-}
-.ju:hover .right,.chan:hover .right,.fazhan:hover .right{
-    left: 0;
-} */
-/* nav li line */
-/* .ju .right::before{
-    display: inline-block;
-    content: "|";
-    padding: 0 15px;
-    color: #1c1d1d;
-    width: 1px;
-    border: 0;
-} */
 /* dropdown */
 .caret{
     display: inline-block;
@@ -254,15 +212,23 @@ ul.nav {
     border-left: 4px solid transparent;
     transition: all .6s;
 }
-.wo:hover .caret{
+.chan .caret{
+    display: block;
+ /* float: right; */
+ position: absolute;
+ top: 50%;
+ transform: translateY(-50%);
+ right: 0;
+ line-height: 100px;   
+}
+.wo:hover .caret,.chan:hover .caret{
     border-bottom: 4px dashed;
     border-top: 0px;
 }
-.wo:hover .dropdown-menu{
+.wo:hover .dropdown-menu,.chan:hover .dropdown-menu{
     display: block;
 }
 .dropdown-menu {
-    font-size: 18px;
     min-width: 100px;
     border-radius: 0;
     background-color: rgba(0, 0, 0, .4);

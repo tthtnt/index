@@ -116,4 +116,50 @@ body{
 .btn-info:hover{
     background-color: #2980b9;
 }
+/* font display */
+/* .right,
+.unleft {
+    left: 0;
+}
+
+.unright,
+.left {
+    right: 0;
+}
+
+.right,
+.left {
+    left: 50%;
+}
+
+.right,
+.unright,
+.left,
+.unleft {
+    transition: all .6s;
+    display: block;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.unright,
+.unleft {
+    width: 0px;
+    overflow: hidden;
+}
+.ju:hover .unright,.wo:hover .unleft,.chan:hover .unright,.fazhan:hover .unright,.you:hover .unleft{
+    width: 2em;
+}
+.ju:hover .right,.chan:hover .right,.fazhan:hover .right{
+    left: 0;
+} */
+/* nav li line */
+/* .ju .right::before{
+    display: inline-block;
+    content: "|";
+    padding: 0 15px;
+    color: #1c1d1d;
+    width: 1px;
+    border: 0;
+} */
 
