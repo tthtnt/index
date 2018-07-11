@@ -14,14 +14,38 @@
     <!-- Font Awesome -->
     <link rel="stylesheet" href="css/font-awesome.min.css">
     <!-- style -->
+    <link rel="stylesheet" href="base.css">
     <link rel="stylesheet" href="style-copy.css">
     <link rel="stylesheet" href="index.css">
+    <!-- icon fonts -->
+    <link rel="stylesheet" href="fonts-style.css">
 </head>
 
 <body>
-
+    <div class="sm-nav">
+        <div class="container">
+            <div class="language">
+                <a href="#">中文
+                    <span class="glyphicon glyphicon-chevron-down" aria-hidden="true"></span>
+                </a>
+            </div>
+            <div class="sm-menu">
+                <a href="">
+                    <span></span>
+                </a>
+            </div>
+            <div class="search">
+                <form action="">
+                    <input type="text" placeholder="搜索...">
+                    <button type="submit">
+                        <span></span>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
     <nav class="navbar navbar-default" role="navigation">
-        <div class="test container">
+        <div class="container">
             <!-- logo and toggle get grouped for better mobile display -->
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
@@ -38,17 +62,19 @@
                 <ul class="nav navbar-nav">
                     <li class="ju">
                         <a href="#">
-                            <span class="right">聚焦</span>
-                            <span class="unright">线下</span>
+                            <span class="line">|</span>
+                            聚焦
+
+                            <!-- <span class="right">聚焦</span>
+                            <span class="unright">线下</span> -->
                         </a>
 
                     </li>
                     <li class="wo">
                         <a href="#">
-                            <span class="left">我们
-                                <b class="caret"></b>
-                            </span>
-                            <span class="unleft">关于</span>
+                            我们
+                            <b class="caret"></b>
+
                         </a>
                         <ul class="dropdown-menu">
                             <li>
@@ -65,20 +91,24 @@
                     </li>
                     <li class="chan">
                         <a href="#">
-                            <span class="right">产品</span>
-                            <span class="unright">中心</span>
+                            产品
+                            <!-- <span class="right">产品</span>
+                            <span class="unright">中心</span> -->
                         </a>
                     </li>
                     <li class="fazhan">
                         <a href="#">
-                            <span class="right">发展</span>
-                            <span class="unright">蓝图</span>
+                            发展
+                            <!-- <span class="right">发展</span>
+                            <span class="unright">蓝图</span> -->
                         </a>
                     </li>
                     <li class="you">
                         <a href="#">
-                            <span class="left">优势</span>
-                            <span class="unleft">综合</span>
+                            <!-- <span class="line">|</span> -->
+                            优势
+                            <!-- <span class="left">优势</span>
+                            <span class="unleft">综合</span> -->
                         </a>
                     </li>
                 </ul>
@@ -86,10 +116,70 @@
 
         </div>
     </nav>
-    <div class="video"></div>
-    <video style=" z-index: -1;" loop autoplay="" name="media">
-        <source src="https://t.alipayobjects.com/images/T1T78eXapfXXXXXXXX.mp4" type="video/mp4">
-    </video>
+    <div class="video">
+        <video style=" z-index: -1;" loop autoplay="" name="media">
+            <source src="https://t.alipayobjects.com/images/T1T78eXapfXXXXXXXX.mp4" type="video/mp4">
+        </video>
+        <div class="button-down">
+            <a href="#">
+                <span>
+
+                </span>
+            </a>
+        </div>
+    </div>
+
+
+    <!-- <div class="bottom">
+        
+    </div> -->
+    <footer>
+        <div class="second-nav">
+            <ul class="clearfix">
+                <li>
+                    <a href="#">关于我们</a>
+                </li>
+                <li>
+                    <a href="#">联系我们</a>
+                </li>
+                <li>
+                    <a href="#">INVESTOR</a>
+                </li>
+                <li>
+                    <a href="#">RELATIONS</a>
+                </li>
+                <li>
+                    <a href="#">招贤纳士</a>
+                </li>
+            </ul>
+            <ul class="clearfix">
+                <li>
+                    <a href="#">服务协议</a>
+                </li>
+                <li>
+                    <a href="#">IPHONE 客户端</a>
+                </li>
+                <li>
+                    <a href="#">INVESTOR</a>
+                </li>
+                <li>
+                    <a href="#">RELATIONS</a>
+                </li>
+                <li>
+                    <a href="#">招贤纳士</a>
+                </li>
+            </ul>
+        </div>
+        <div class="footer-bottom">
+            <ul class="clearfix">
+                <li>京公网安备 11010802000104号</li>
+                <li>|</li>
+                <li>广播电视节目制作经营许可证（京）字第05793号</li>
+                <li>|</li>
+                <li>京ICP备09113703号-1</li>
+            </ul>
+        </div>
+    </footer>
     <!-- jquery -->
     <script src="js/jquery.js"></script>
     <!-- Bootstrap JavaScript -->

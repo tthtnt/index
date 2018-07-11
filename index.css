@@ -1,7 +1,92 @@
-body{
-    overflow: hidden;
+html,body{
+    /* overflow: hidden; */
+    width: 100%;
+    height: 100%;
+}
+/* sm-nav */
+.sm-nav{
+    width: 100%;
+    height: 85px;
+    background-color: #1c1d1d;
+    line-height: 85px;
+    position: fixed;
+    z-index: 100;
+}
+.sm-nav a{
+    font-size: 24px;
+    color: #7b7d87;
+}
+.language{
+    float: left;
+}
+.language span{
+    margin-left:12px; 
+    font-size: 18px;
+    font-weight: normal;
+}
+/* sm-menu */
+.sm-menu{
+    float: right;
+    padding-top: 20px;
+    height: 85px;
+}
+.sm-menu span::before{
+    content: "\e9bd";
+    float: right;
+    display: block;
+    height: 45px;
+    line-height: 45px;
+    font-family: "icomoon";
+    font-size: 28px;
+    color: #7b7d87;
+    margin-left: 55px;
+}
+/* search */
+.search{
+    font-size: 0px;
+    height: 85px;
+    float: right;
+    padding-top: 20px;
+}
+.search input{
+    outline: none;
+    height: 45px;
+    border: 0;
+    width: 0px;
+    float: left;
+    font-size: 18px;
+    color: #7b7d87;
+    transition: all .6s;
+}
+.search button{
+    outline: none;
+    height: 45px;
+    text-align: center;
+    background-color: transparent;
+    border: 0;
+}
+.search span::before{
+    content: "\e986";
+    float: right;
+    display: block;
+    height: 45px;
+    line-height: 45px;
+    font-family: "icomoon";
+    font-size: 28px;
+    color: #7b7d87;
+}
+.search:hover input{
+    width: 280px;
+    padding:10px 15px; 
 }
 /* navbar */
+.navbar-header{
+    width: 150px;
+}
+.navbar-collapse{
+    width: 720px;
+    float: right;
+}
 .navbar-default{
     /* background-color: #f6f8f9; */
     background-color: transparent;
@@ -9,6 +94,7 @@ body{
     margin-bottom: 0;
     z-index: 100;
     position: relative;
+    top: 85px;
 }
 .navbar-default .navbar-brand{
     color: #2c3e50;
@@ -20,6 +106,9 @@ body{
 }
 .navbar-default .navbar-toggle{
     border-color: #2c3e50;
+}
+.navbar .container{
+    width: 900px;
 }
 /* brand */
 .navbar-brand{
@@ -41,10 +130,10 @@ ul.nav>li {
     float: left;
     white-space: nowrap;
     position: relative;
-    line-height: 100px;
+    /* line-height: 100px; */
     font-size: 18px;
     text-align: center;
-    padding: 0 30px;
+    padding: 0 15px;
 }
 
 ul.nav {
@@ -56,7 +145,15 @@ ul.nav {
     color: #fff;
     text-align: center;
     height: 100px;
+    line-height: 100px;
     width: 4em;
+    padding: 0;
+    transition: all .6s;
+    /* display: inline-block; */
+    /* width: auto; */
+}
+.navbar-default .navbar-nav .ju a{
+    width: 4.8em;
 }
 .navbar-default .navbar-nav>li>a:focus, .navbar-default .navbar-nav>li>a:hover{
     color: #bbb;
@@ -65,8 +162,40 @@ ul.nav {
     color: #bbb;
     background-color: transparent;
 }
+.ju a::before,.wo a::before,.chan a::before,.fazhan a::before,.you a::before{
+    display: block;
+    width: 0;
+    overflow: hidden;
+    transition: width .6s;
+}
+.ju a::before{
+    content: "线下";
+    float: right;
+}
+.ju:hover a::before,.wo:hover>a::before,.chan:hover>a::before,.fazhan:hover a::before{
+    width:50%;
+}
+.you:hover a::before{
+    width: 3em;
+}
+.wo>a::before{
+    content: "关于";
+    float: left;
+}
+.chan a::before{
+    content: "中心";
+    float: right;
+}
+.fazhan a::before{
+    content: "蓝图";
+    float: right;
+}
+.you a::before{
+    content: "| 综合";
+    float: left;
+}
 /* font display */
-.right,
+/* .right,
 .unleft {
     left: 0;
 }
@@ -101,7 +230,16 @@ ul.nav {
 }
 .ju:hover .right,.chan:hover .right,.fazhan:hover .right{
     left: 0;
-}
+} */
+/* nav li line */
+/* .ju .right::before{
+    display: inline-block;
+    content: "|";
+    padding: 0 15px;
+    color: #1c1d1d;
+    width: 1px;
+    border: 0;
+} */
 /* dropdown */
 .caret{
     display: inline-block;
@@ -141,13 +279,15 @@ ul.nav {
 }
 /* video */
 .video {
+    margin: 0;
     position: absolute;
     background-color: rgba(0, 0, 0, .5);
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    z-index: 0;
+    z-index: 1;
+    overflow: hidden;
 }
 
 video {
@@ -158,4 +298,65 @@ video {
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
+    z-index: 0;
+    background-color: rgba(0, 0, 0, .5);
+}
+.button-down span::before{
+    content: "\ea3e";
+    font-size: 24px;
+    color: #fff;
+    position: absolute;
+    bottom: 70px;
+    font-family: "icomoon";
+    left: 50%;
+    transform: translateX(-50%);
+}
+.bottom{
+    position: relative;
+    z-index: 100;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #fff;
+}
+footer{
+    /* border-top: 1px solid #fff; */
+    height: 300px;
+    position: relative;
+    top: 100%;
+    transform: translateY(-100px);
+    /* bottom: -85px; */
+}
+footer .second-nav{
+    height: 230px;
+    background-color: #1c1d1d;
+    border-top: 1px solid #fff;
+    margin: auto;
+}
+.second-nav ul{
+    text-align: center;
+    margin: 65px auto 45px;
+}
+.second-nav ul li,.footer-bottom ul li{
+    display: inline;
+    /* float: left; */
+    list-style: none;
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+}
+.second-nav ul li a,.footer-bottom ul li a{
+    color: #fff;
+}
+.footer-bottom{
+    height: 70px;
+    background-color: #535354;
+}
+.footer-bottom ul{
+    text-align: center;
+    line-height: 70px;
+    margin: 0;
 }
