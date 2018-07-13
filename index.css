@@ -96,6 +96,10 @@ html,body{
     position: relative;
     top: 85px;
 }
+/* 其他页面的nav */
+.transform-nav.navbar-default{
+    top: 0;
+}
 .navbar-default .navbar-brand{
     color: #2c3e50;
 }
