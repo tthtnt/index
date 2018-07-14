@@ -4,7 +4,7 @@ function init() {
     var ul = document.getElementById('ul');
     var li = ul.getElementsByTagName('li');
     var div = ul.getElementsByTagName('div');
-    console.log(div);
+    // console.log(div);
     oPrev = document.getElementById('prev');
     oNext = document.getElementById('next');
     // 建立一个空数组
@@ -42,12 +42,12 @@ function init() {
         ]);
     }
     // 点击事件
-    console.log(oPrev);
+    // console.log(oPrev);
     oPrev.onclick = function moveTP() {
-        console.log("kaishi");
+        // console.log("kaishi");
         arr.push(arr[0]);
         arr.shift();
-        console.log(arr);
+        // console.log(arr);
         for (var i = 0; i < li.length; i++) {
 
             li[i].style.zIndex = arr[i][2];
@@ -65,7 +65,7 @@ function init() {
         }
     }
     patent.onclick = function(event){
-        console.log(event.target.className);
+        // console.log(event.target.className);
         for(var i = 0;i < div.length;i++){
             div[i].style.opacity = 0;
         }
@@ -77,9 +77,9 @@ function init() {
         // console.log(event.currentTarget);
         // console.log(event.currentTarget.nextElementSibling);
     }
-    console.log(arr);
+    // console.log(arr);
     // console.log(li[0].currentStyle['width']);
-    console.log(getComputedStyle(li[0], null)['bottom']);
+    // console.log(getComputedStyle(li[0], null)['bottom']);
 }
 
 function getStyle(obj, name) {
