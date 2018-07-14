@@ -97,4 +97,21 @@ function startMove(obj, left, bottom, rotate) {
     obj.style.transform = 'rotate(' + rotate + 'deg)';
 
 }
-init();
+function scrollLink(){
+    var top = $('#top').offset().top;
+    var company = $('#cp-btn').offset().top;
+    var team = $('#tm-btn').offset().top;
+    $('.top').click(function(){
+        $('html,body').animate({scrollTop:top},1000);
+    })
+    $('.cp-btn').click(function(){
+        $('html,body').animate({scrollTop:company},1000);
+    })
+    $('.tm-btn').click(function(){
+        $('html,body').animate({scrollTop:team},1000);
+    })
+}
+window.onload = function(){
+    init();
+    scrollLink();
+}

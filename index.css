@@ -296,8 +296,9 @@ footer{
     /* border-top: 1px solid #fff; */
     height: 300px;
     position: relative;
-    top: 100%;
-    transform: translateY(-100px);
+    /* margin-top: -100px; */
+    /* top: 100%; */
+    /* transform: translateY(-100px); */
     /* bottom: -85px; */
 }
 footer .second-nav{
@@ -330,3 +331,4 @@ footer .second-nav{
     line-height: 70px;
     margin: 0;
 }
+

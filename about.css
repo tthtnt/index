@@ -1,3 +1,4 @@
+
 .about-container {
     background: #1b1b1b;
     overflow: hidden;
@@ -5,7 +6,7 @@
     position: absolute;
     width: 100%;
     top: 0;
-    background: url("images/images/bg_02.jpg") no-repeat;
+    background: url("images/bg.jpg") no-repeat;
 }
 
 .inner {
@@ -35,7 +36,7 @@
     margin: 0 auto;
     overflow: hidden;
 }
-/* li 地位 */
+/* li 定位 */
 .about-container ul li {
     list-style: none;
     /* float: left; */
@@ -49,6 +50,9 @@
     left: 0;
     transition: all .6s;
     cursor: pointer;
+}
+.about-container ul li:hover{
+    transform: translateY(-5%) scale(1.05);
 }
 
 .about-container ul li:nth-child(1) {
@@ -120,13 +124,8 @@
     transition: all 1s;
 }
 /* .about-container ul li:nth-child(3):hover + div{
-    opacity: 1;
-} */
-.clearfix {
-    content: "";
-    display: block;
-    clear: both;
-}
+    opacity: 1;} */
+
 
 .inner span {
     width: 40px;
@@ -153,4 +152,222 @@
 
 .next {
     right: 10%;
+}
+/* 标签 */
+.tab{
+    background-color: #fff;
+    position: relative;
+    
+    width: 100%;
+    height: 110px;
+    color: #e8e7e6;
+    text-align: center;
+}
+.patent-header{
+    top: 85px;
+}
+.company-header{
+    background-color: #666665;
+}
+.team-header{
+    background-color: #020512;
+}
+.tab div{
+    background-color: #666665;
+    width: 270px;
+    height: 110px;
+    /* padding:25px 50px 25px 75px; */
+    position: absolute;
+    top: 0;
+}
+.company-header div{
+    background-color: #020512;
+    color: #e8e7e6;
+} 
+.team-header div{
+    background-color: #fff;
+    color: #666665;
+}
+.tab div::after{
+    content: "";
+    width: 0;
+    height: 0;
+    border-width:0 110px 110px 0;
+    border-style:solid;
+    border-color:transparent  transparent  #666665 transparent;
+    position: absolute;
+    top: 0;
+    right: -110px;
+}
+.company-header div::after{
+    border-color:transparent  transparent  #020512 transparent;
+} 
+.team-header div::after{
+    border-color:transparent  transparent  #fff transparent;
+} 
+.tab h2{
+    font-size: 36px;
+}
+.tab p{
+    font-size: 24px;
+}
+/* 公司资质 */
+.company{
+    position: relative;
+    background-color: #020512;
+}
+.company-left{
+    width: 60%;
+    height: 1000px;
+    float: left;
+    overflow: hidden;
+    text-align: center;
+}
+.company-img{
+    width: 800px;
+    margin: 0 auto;
+    height: auto;
+    line-height: 1000px;
+}
+.company-img img{
+    width: 100%;
+}
+.company-right{
+    width: 30%;
+    float: right;
+}
+.company-text{
+    line-height: 1000px;
+    
+}
+.company-text p{
+    font-size: 14px;
+    color: #fff;
+    display: inline-block;
+    vertical-align: middle;
+    line-height: 18px;
+}
+/* 团队风采 */
+.team{
+    background-color: #fff;
+    /* height: 900px; */
+    background: url("images/bwbg.jpg") repeat-y 0 110px;
+}
+.team-inner{
+    position: relative;
+    
+}
+.team-teamplate{
+    height: 939px;
+}
+.team-left,.team-right{
+    height: 900px;
+    width: 600px;
+    position: relative;
+}
+.team-left{
+    float: left;
+}
+.team-right{
+    float: right;
+}
+.team-left-img,.team-right-img{
+    width: 280px;
+    position: absolute;
+    z-index: 1;
+}
+.team-left-img img,.team-right-img img{
+    width: 100%;
+}
+.team-left-img{
+    top: 185px;
+    left: 0;
+}
+.team-right-img{
+    top: 440px;
+    right: 0;
+}
+.team-left-text,.team-right-text{
+    width: 460px;
+    background-color: #676665;
+    height: 500px;
+    color: #fff;
+    position: absolute;
+    line-height: 500px;
+}
+.team-left-text p,.team-right-text p{
+    line-height: 18px;
+    font-size: 14px;
+    vertical-align: middle;
+    display: inline-block;
+}
+.team-left-text{  
+    top: 80px;
+    /* left: 120px; */
+    right: 0;
+    padding: 0 50px 0 150px;
+}
+.team-right-text{
+    top: 380px;
+    left: 20px;
+    padding: 0 180px 0 50px;
+}
+/* 锚点 */
+.link{
+    position: absolute;
+    top: -85px;
+}
+.link-btn{
+    width: 50px;
+    height: 300px;
+    position: fixed;
+    right: 100px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 100;
+    /* background-color: #fff; */
+}
+.link-btn div{
+    width: 50px;
+    height: 50px;
+    /* background-color: rgba(0, 0, 0, .5); */
+    text-align: center;
+    line-height: 50px;
+    color: #fff;
+    border-radius: 10px; 
+    /* overflow: hidden; */
+    
+}
+.link-btn div a{
+    color: #ffffff;
+    display: block;
+    position: relative;
+    border-bottom: 1px solid #fff;
+    width: 50px;
+    height: 50px;
+    font-family: "icomoon";
+    border-radius: 10px;
+    /* overflow: hidden; */
+    background-color: rgba(0, 0, 0, .5);
+}
+.link-btn div a span{
+    
+    position: absolute;
+    display: block;
+    /* float: left; */
+    /* width: 100px; */
+    overflow: hidden;
+    width: 0;
+    height: 50px;
+    left: 0;
+    top: 0;
+    border-radius: 10px; 
+    /* top: -50px; */
+    background-color: rgba(0, 0, 0, .5);
+    border-bottom: 1px solid #fff;
+    transition: all .4s;
+}
+.link-btn div a:hover span{
+    width: 100px;
+    left: -100px;
 }
